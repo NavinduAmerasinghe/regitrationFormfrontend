@@ -20,7 +20,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = "http://localhost:9000/api/users";
+      const url = "https://registrationformbackend.herokuapp.com/api/users";
       const { data: res } = await axios.post(url, data);
       navigate("/login");
       console.log(res.message);

@@ -16,7 +16,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = "https://fullstackregistration.herokuapp.com/api/auth";
+      const url = "https://registrationformbackend.herokuapp.com/api/auth";
       const { data: res } = await axios.post(url, data);
       localStorage.setItem("token", res.data);
       window.location = "/";
@@ -53,7 +53,7 @@ const Login = () => {
             />
             <input
               type="password"
-              // class="fontAwesome"&#xf007; 
+              // class="fontAwesome"&#xf007;
               placeholder="Password"
               name="password"
               onChange={handleChange}
